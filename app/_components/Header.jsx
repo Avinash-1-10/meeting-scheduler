@@ -12,10 +12,10 @@ const Header = () => {
             width={50}
             height={50}
             alt="logo"
-            className="w-[50px] md:w-[50px] animate-bounce"
+            className="w-[50px] md:w-[50px] animate-spin"
           />
           <span className=" font-bold font-mono text-xl md:text-2xl">
-            My-Meet
+            Calendly
           </span>
         </div>
         <ul className="hidden md:flex gap-14 font-medium text-lg">
