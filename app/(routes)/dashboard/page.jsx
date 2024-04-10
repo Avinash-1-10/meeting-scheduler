@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { app } from "@/config/FirebaseConfig";
+
+
 import {
   LogoutLink,
   useKindeBrowserClient,
@@ -8,6 +8,9 @@ import {
 import React, { useEffect, useState } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useRouter } from "next/navigation";
+import { app } from "../../../config/FirebaseConfig";
+import { Button } from "../../../components/ui/button";
+import MeetingType from "./meeting-type/page";
 
 const Dashboard = () => {
   const db = getFirestore(app);
@@ -32,15 +35,12 @@ const Dashboard = () => {
     }
   };
 
-  if(loading){
-    return <h2>Loading...</h2>
+  if (loading) {
+    return <h2>Loading...</h2>;
   }
   return (
-    <div className="flex flex-col p-5 justify-center items-center gap-5">
-      <h1>Dashboard</h1>
-      <LogoutLink>
-        <Button>Logout</Button>
-      </LogoutLink>
+    <div>
+      <MeetingType/>
     </div>
   );
 };
