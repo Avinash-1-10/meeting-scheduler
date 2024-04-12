@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ChevronLeft } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Input } from "../../../../components/ui/input";
@@ -14,23 +14,22 @@ import ThemeOptions from "../../../_utils/ThemeOptions";
 import Image from "next/image";
 import Link from "next/link";
 
-const MeetingForm = ({setFormValue=()=>"a"}) => {
+const MeetingForm = ({ setFormValue }) => {
   const [locationType, setLocationType] = useState("");
   const [themeColor, setThemeColor] = useState("");
   const [eventName, setEventName] = useState("");
   const [duration, setDuration] = useState(30);
   const [locationUrl, setLocationUrl] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
     setFormValue({
-        eventName:eventName,
-        duration:duration,
-        locationType:locationType,
-        locationUrl:locationUrl,
-        themeColor:themeColor
-    })
-},[eventName,duration,locationType,locationUrl,themeColor])
-
+      eventName: eventName,
+      duration: duration,
+      locationType: locationType,
+      locationUrl: locationUrl,
+      themeColor: themeColor,
+    });
+  }, [eventName, duration, locationType, locationUrl, themeColor]);
 
   return (
     <div className="p-4 sm:p-8">
@@ -57,16 +56,28 @@ const MeetingForm = ({setFormValue=()=>"a"}) => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="border p-3 shadow-md rounded-md flex flex-col gap-2 pr-10 bg-white">
-            <DropdownMenuItem onClick={() => setDuration(15)} className="cursor-pointer">
+            <DropdownMenuItem
+              onClick={() => setDuration(15)}
+              className="cursor-pointer"
+            >
               15 Min
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setDuration(30)} className="cursor-pointer">
+            <DropdownMenuItem
+              onClick={() => setDuration(30)}
+              className="cursor-pointer"
+            >
               30 Min
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setDuration(45)} className="cursor-pointer">
+            <DropdownMenuItem
+              onClick={() => setDuration(45)}
+              className="cursor-pointer"
+            >
               45 Min
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setDuration(60)} className="cursor-pointer">
+            <DropdownMenuItem
+              onClick={() => setDuration(60)}
+              className="cursor-pointer"
+            >
               60 Min
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -77,11 +88,18 @@ const MeetingForm = ({setFormValue=()=>"a"}) => {
             <div
               key={index}
               className={`border flex flex-col justify-center items-center p-3 rounded-lg ${
-                locationType === option.name ? "bg-blue-100 border-blue-500" : ""
+                locationType === option.name
+                  ? "bg-blue-100 border-blue-500"
+                  : ""
               } hover:bg-blue-100 hover:border-primary cursor-pointer`}
               onClick={() => setLocationType(option.name)}
             >
-              <Image src={option.icon} width={30} height={30} alt={option.name} />
+              <Image
+                src={option.icon}
+                width={30}
+                height={30}
+                alt={option.name}
+              />
               <h2>{option.name}</h2>
             </div>
           ))}
@@ -89,7 +107,10 @@ const MeetingForm = ({setFormValue=()=>"a"}) => {
         {locationType && (
           <>
             <h2 className="font-bold">Add {locationType} Url</h2>
-            <Input placeholder="Add Url" onChange={(e) => setLocationUrl(e.target.value)} />
+            <Input
+              placeholder="Add Url"
+              onChange={(e) => setLocationUrl(e.target.value)}
+            />
           </>
         )}
         <h2 className="font-bold">Select Theme Color</h2>
