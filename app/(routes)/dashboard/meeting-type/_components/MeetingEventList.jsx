@@ -53,7 +53,7 @@ function MeetingEventList() {
   };
 
   const onDeleteMeetingEvent = async (event) => {
-    await deleteDoc(doc(db, "Business", event?.id)).then((resp) => {
+    await deleteDoc(doc(db, "MeetingEvent", event?.id)).then((resp) => {
       toast("Meeting Event Deleted!");
       getEventList();
     });
@@ -80,6 +80,7 @@ function MeetingEventList() {
             className="border shadow-md 
                 border-t-8 rounded-lg p-5 flex flex-col gap-3"
             style={{ borderTopColor: event?.themeColor }}
+            key={index}
           >
             <div className="flex justify-end">
               <DropdownMenu>
