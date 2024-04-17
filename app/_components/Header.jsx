@@ -14,7 +14,7 @@ const Header = () => {
             width={50}
             height={50}
             alt="logo"
-            className="w-[50px] md:w-[50px] animate-spin"
+            className="w-[50px] md:w-[50px] animate-spin-slow"
           />
           <span className=" font-bold font-mono text-xl md:text-2xl">
             Calendly
