@@ -44,6 +44,7 @@ function TimeDateSelection({
              ${time == selectedTime && "bg-primary text-white"}
              `}
             variant="outline"
+            key={index}
           >
             {time}
           </Button>

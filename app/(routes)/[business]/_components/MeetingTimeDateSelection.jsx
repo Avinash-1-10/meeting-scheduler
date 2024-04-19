@@ -20,7 +20,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Plunk from "@plunk/node";
 import { render } from "@react-email/render";
-import Email from "../../../../emails/index";
+import Email from "../../../../emails/index"
 function MeetingTimeDateSelection({ eventInfo, businessInfo }) {
   const [date, setDate] = useState(new Date());
   const [timeSlots, setTimeSlots] = useState();

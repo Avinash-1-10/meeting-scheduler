@@ -42,7 +42,7 @@ import {
                 <Img
                   style={image}
                   width={620}
-                  src={'https://yt3.googleusercontent.com/LtM9aKdQGsx4SyoAvnBSOxxoTXlqgUUr9iQJveGRmrzMIdjONEToRJ6mT6ysmKog9AaKast3IGY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj'}
+                  src={'https://img.freepik.com/free-vector/big-meeting-room-concept-illustration_114360-24589.jpg?w=2000&t=st=1713536843~exp=1713537443~hmac=4d46b861b41b0ca710b3a4a5aa0f6549f3c6360ee53ed21f83703e9256d71aed'}
                 />
               </Row>
   
@@ -105,13 +105,6 @@ import {
               </Row>
             </Section>
   
-            <Section style={containerImageFooter}>
-              <Img
-                style={image}
-                width={620}
-                src={'https://yt3.googleusercontent.com/LtM9aKdQGsx4SyoAvnBSOxxoTXlqgUUr9iQJveGRmrzMIdjONEToRJ6mT6ysmKog9AaKast3IGY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj'}
-              />
-            </Section>
   
             <Text
               style={{
@@ -120,8 +113,8 @@ import {
                 color: "rgb(0,0,0, 0.7)",
               }}
             >
-              © 2022 | Yelp Inc., 350 Mission Street, San Francisco, CA 94105,
-              U.S.A. | www.yelp.com
+              © 2024 | Avinash Yede
+              India | avinashyede.vercel.app
             </Text>
           </Container>
         </Body>
