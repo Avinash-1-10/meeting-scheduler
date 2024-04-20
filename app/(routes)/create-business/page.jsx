@@ -30,6 +30,8 @@ const CreateBusiness = () => {
         Saturday: true,
         Sunday: true,
       },
+      startTime:"10:00",
+      endTime:"17:00"
     }).then((resp) => {
       console.log("Document Saved");
       toast("New Business Created");

@@ -60,7 +60,7 @@ const Availability = () => {
   };
 
   const handleSave = async () => {
-    console.log(daysAvailable, startTime, endTime);
+    // console.log(daysAvailable, startTime, endTime);
     const docRef = doc(db, "Business", user?.email);
     await updateDoc(docRef, {
       daysAvailable: daysAvailable,
