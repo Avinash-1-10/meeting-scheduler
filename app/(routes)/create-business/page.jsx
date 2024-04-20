@@ -1,7 +1,7 @@
 "use client";
-import { Input } from "@/@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { app } from "@/config/FirebaseConfig";
+import { Input } from "../../../components/ui/input";
+import { Button} from "../../../components/ui/button";
+import { app } from "../../../config/FirebaseConfig";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import Image from "next/image";
@@ -34,7 +34,7 @@ const CreateBusiness = () => {
         width={200}
         height={200}
         alt="logo"
-        className="w-[50px] md:w-[50px] animate-spin"
+        className="w-[50px] md:w-[50px] animate-spin-slow"
       />
       <div className="flex flex-col items-center gap-4 max-w-3xl">
         <h2 className="text-3xl sm:text-4xl font-bold text-center">
