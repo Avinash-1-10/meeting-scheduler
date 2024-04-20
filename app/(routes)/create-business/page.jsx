@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "../../../components/ui/input";
-import { Button} from "../../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import { app } from "../../../config/FirebaseConfig";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
@@ -21,6 +21,15 @@ const CreateBusiness = () => {
       businessName: businessName,
       email: user.email,
       userName: user.given_name + " " + user.family_name,
+      daysAvailable: {
+        Monday: true,
+        Tuesday: true,
+        Wednesday: true,
+        Thursday: true,
+        Friday: true,
+        Saturday: true,
+        Sunday: true,
+      },
     }).then((resp) => {
       console.log("Document Saved");
       toast("New Business Created");
